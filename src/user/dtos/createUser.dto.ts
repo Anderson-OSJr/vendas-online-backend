@@ -1,8 +1,20 @@
+import { IsString } from "class-validator";
+
+
 // eslint-disable-next-line prettier/prettier
-export interface CreateUserDto {
+export class CreateUserDto {
+    @IsString()
     name: string;
+
+    @IsString()
     email: string;
-    fone: string;
+
+    @IsString()
+    phone: string;
+
+    @IsString()
     cpf: string;
+
+    @IsString()
     password: string;
 }
