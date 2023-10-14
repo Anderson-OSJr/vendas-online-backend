@@ -6,6 +6,7 @@ import { StateModule } from './state/state.module';
 import { CityModule } from './city/city.module';
 import { AddressModule } from './address/address.module';
 import { CacheModule } from './cache/cache.module';
+import { TesteModule } from './teste/teste.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -26,7 +27,8 @@ import { CacheModule } from './cache/cache.module';
     StateModule,
     CityModule,
     AddressModule,
-    CacheModule],
+    CacheModule,
+    TesteModule],
   controllers: [],
   providers: [],
 })
