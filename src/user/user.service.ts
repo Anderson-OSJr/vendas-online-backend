@@ -23,11 +23,22 @@ export class UserService {
         });        
     }
 
+    /* GET ONE USER BY HIS RELATION WITH ADDRESS */
+    async getUserByIdUsingRelations(userId: number): Promise<UserEntity> {
+        return this.userRepository.findOne({
+            where:{
+                id: userId,
+            },
+            relations: ['addresses'],
+        });
+    }
+
     /* GET ALL USERS FUNCTION */
     async getAllUsers(): Promise<UserEntity[]> {
         return this.userRepository.find();
     }
 
+    /* GET(FIND) USER BY ID */
     async findUserById(userId: number): Promise<UserEntity>  {
         const user = await this.userRepository.findOne({
             where: {
